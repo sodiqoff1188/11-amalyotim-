@@ -1,0 +1,152 @@
+.sliding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 97%;
+    height: 60vh;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+    width: 100%;
+    height: 100vh;
+}
+
+.card {
+    width: 500px;
+    height: 500px;
+    font-size: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.3);
+}
+
+.card:hover 
+.top1 {
+    background-size: 120%;
+}
+
+.card:hover 
+.top2 {
+    background-size: 120%;
+}
+
+.card:hover 
+.top3 {
+    background-size: 120%;
+}
+
+.card:hover 
+.top4 {
+    background-size: 120%;
+}
+
+.top1 {
+    background-image: url(../../assets/imagee.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: background-size 2s ease;
+
+}
+
+.top2 {
+    background-image: url(../../assets/imageee.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.top3 {
+    background-image: url(../../assets/image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.top4 {
+    background-image: url(../../assets/imageeee.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.child-card {
+    width: 50px;
+    height: 50px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.child-card h1 {
+    font-size: 9px;
+}
+
+#span {
+    font-size: 30px;
+}
+
+.big-slide {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.slidreHead {
+    display: flex;
+    width: 97%;
+    /* height: 10vh; */
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+}
+
+.buttons button {
+    opacity: 0;
+}
+
+.bottom {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 250px;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.links {
+    display: flex;
+    gap: 30px;
+}
+
+#Span {
+    color: blue;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
