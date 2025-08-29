@@ -1,7 +1,8 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShareNodes } from '@fortawesome/free-solid-svg-icons'
 import './Slider.css'
+import { FaShareNodes } from "react-icons/fa6";
+import { FaRegCommentAlt } from "react-icons/fa";
+
 
 
 const Slider = () => {
@@ -32,13 +33,14 @@ const Slider = () => {
 
                             <div className="links">
                                 <h5>Muallif: Ali Sodiqov</h5>
-                                <FontAwesomeIcon icon={faShareNodes} />
-                                {/* icon uchun joy */}
+                                <FaShareNodes />
+                                <FaRegCommentAlt />
                             </div>
 
                             <h3>Oziq-ovqat xarid qilishni unutganingizda televizor kechki ovqat pitsa bo'lagi uchun tanlagan qo'shimchalar, bo'yoq... <br />
                             </h3>
-                            <span id='Span'>O'qishni davom ettiring</span>
+
+                            <h4 id='Span'>O'qishni davom ettiring</h4>
 
 
                         </div>
@@ -58,13 +60,13 @@ const Slider = () => {
 
                             <div className="links">
                                 <h5>Muallif: Ali Sodiqov</h5>
-                                <FontAwesomeIcon icon={faShareNodes} />
-                                {/* icon uchun joy */}
+                                <FaShareNodes />
+                                <FaRegCommentAlt />
                             </div>
 
                             <h3>Ehtimol, hamkorlik, aloqa va nazorat punktlari bo'lmagan, kelishilgan jarayon bo'lmagan ...
                             </h3>
-                            <span id='Span'>O'qishni davom ettiring</span>
+                            <h4 id='Span'>O'qishni davom ettiring</h4>
 
                         </div>
                     </div>
@@ -84,13 +86,13 @@ const Slider = () => {
 
                             <div className="links">
                                 <h5>Muallif: Ali Sodiqov</h5>
-                                <FontAwesomeIcon icon={faShareNodes} />
-                                {/* icon uchun joy */}
+                                <FaShareNodes />
+                                <FaRegCommentAlt />
                             </div>
 
                             <h3>Eski tildagi chalkash so'zlardan ko'proq narsani anglatuvchi matnga nisbatan nafrat ko'p...
                             </h3>
-                                <span id='Span'>O'qishni davom ettiring</span>
+                            <h4 id='Span'>O'qishni davom ettiring</h4>
 
                         </div>
                     </div>
@@ -108,15 +110,16 @@ const Slider = () => {
 
                             <div className="links">
                                 <h5>Muallif: Ali Sodiqov</h5>
-                                <FontAwesomeIcon icon={faShareNodes} />
-                                {/* icon uchun joy */}
+                                <FaShareNodes />
+                                <FaRegCommentAlt />
+
                             </div>
 
                             <h3>Eski tildagi chalkash so'zlardan ko'proq narsani anglatuvchi matnga nisbatan nafrat ko'p...
                             </h3>
 
-                                <span id='Span'>O'qishni davom ettiring</span>
-                            
+                            <h4 id='Span'>O'qishni davom ettiring</h4>
+
                         </div>
                     </div>
 

@@ -1,95 +1,52 @@
-.sliding {
+/* Slider umumiy container */
+.slider {
     display: flex;
     align-items: center;
-    gap: 20px;
-    width: 97%;
-    height: 1000px;
-    flex-wrap: nowrap;
-    /* har doim yonma-yon turadi */
-    overflow-x: auto;
-    /* scroll yoqiladi */
-    scroll-snap-type: x mandatory;
-    /* slider effekt */
-    -webkit-overflow-scrolling: touch;
-    /* ios uchun yumshoq scroll */
-    justify-content: flex-start;
-    /* chapdan boshlansin */
-    padding: 10px;        
-    overflow-x: hidden;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+    height: 100vh;
 }
 
-/* umumiy card uslubi */
+/* Sliding line */
+.sliding {
+    display: flex;
+    gap: 20px;
+    width: 97%;
+    height: 100vh;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 10px;
+    scroll-behavior: smooth;
+}
+
+/* Card umumiy */
 .card {
-    flex: 0 0 25%;
-    /* default: 4ta card ekranga sig‘adi (kompyuterda) */
     min-width: 300px;
     max-width: 350px;
     height: 600px;
     font-size: 10px;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.3);
     scroll-snap-align: start;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background: #fff;
 }
 
-/* Planshetlar (3 ta card chiqadi) */
-@media (max-width: 1238px) {
-    .card {
-        flex: 0 0 50%;
-        /* ekranning 1/3 qismi */
-        min-width: 385px;
-    }
-
-    .sliding{
-        overflow-y: hidden;
-    }
-}
-
-/* Telefonlar (2 ta card chiqadi) */
-@media (max-width: 768px) {
-    .card {
-        flex: 0 0 50%;
-        /* yarim ekranni egallaydi */
-        min-width: 240px;
-    }
-     .sliding{
-        overflow-y: hidden;
-    }
-}
-
-/* Juda kichik telefonlar (1 ta card chiqadi) */
-@media (max-width: 480px) {
-    .card {
-        flex: 0 0 100%;
-        /* faqat bitta card butun ekranda */
-        min-width: 220px;
-    }
-     .sliding{
-        overflow-y: hidden;
-    }
-}
-
-/* ---- Qolgan sening card dizaynlaring ---- */
-
-.slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 100px;
-    width: 100%;
-    height: 110vh;
-}
-
-.card:hover .top1,
-.card:hover .top2,
-.card:hover .top3,
-.card:hover .top4 {
+/* Hover background zoom */
+.card:hover .top {
     background-size: 120%;
-    transition: all 1s;
+    transition: background-size 1s ease;
 }
 
-.top1 {
-    background-image: url(../../assets/imagee.png);
+/* Card ustki qismi (rasm qismi) */
+.top1,
+.top2,
+.top3,
+.top4 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -97,40 +54,49 @@
     padding: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    transition: background-size 2s ease;
+    transition: background-size 0.8s ease;
+}
+
+/* Har bir top rasmlari */
+.top1 {
+    background-image: url(../../assets/imagee.png);
 }
 
 .top2 {
     background-image: url(../../assets/imageee.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 250px;
-    padding: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
 
 .top3 {
     background-image: url(../../assets/image.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 250px;
-    padding: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
 
 .top4 {
     background-image: url(../../assets/imageeee.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+
+/* Pastki qism */
+.bottom {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     height: 250px;
+    font-size: 15px;
     padding: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    line-height: 23px;
+}
+
+.bottom h2,
+.links,
+h3,
+h4 {
+    padding: 20px 0;
+}
+
+.links {
+    display: flex;
+    gap: 30px;
 }
 
 .child-card {
@@ -149,9 +115,22 @@
     font-size: 30px;
 }
 
+#Span {
+    color: blue;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+#Sspan {
+    color: blue;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
 .big-slide {
     width: 100%;
-    height: 110vh;
+    height: 115vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,31 +143,257 @@
     align-items: center;
     justify-content: space-between;
     font-size: 25px;
-    padding-top: 100px;
+    padding-left: 10px;
 }
 
 .buttons button {
     opacity: 0;
 }
 
-.bottom {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 250px;
-    font-size: 15px;
-    padding: 10px;
+/* 📱 RESPONSIVE DESIGN */
+
+/* 1238px — 3 ta card */
+@media (max-width: 1238px) {
+    .sliding {
+        overflow-x: auto;
+        height: 150vh;
+    }
+
+    .slider {
+        height: 115vh;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
+
+    .slidreHead {
+        padding: 50px 0 0px 0;
+    }
+
+    .card {
+        min-width: calc(103% / 3 - 20px);
+        max-width: calc(103% / 3 - 20px);
+        flex: 0 0 auto;
+        height: 545px;
+    }
+
+    .bottom h2,
+    .links,
+    h3,
+    h4 {
+        /* line-height: 20px; */
+        padding: 10px;
+    }
+     .slidreHead h1 {
+        font-size: 50px;
+        font-weight: 800;
+    }
 }
 
-.links {
-    display: flex;
-    gap: 30px;
+
+
+@media (max-width: 1124px) {
+    .card {
+        height: 530px;
+        flex: 0 0 auto;
+    }
+
+    .bottom h2,
+    .links,
+    h3,
+    h4 {
+        /* line-height: 20px; */
+        padding: 10px;
+        font-size: 16px;
+
+    }
+     .slidreHead h1 {
+        font-size: 50px;
+        font-weight: 800;
+    }
 }
 
-#Span {
-    color: blue;
-    letter-spacing: 1px;
-    font-weight: 600;
+
+@media (max-width: 1002px) {
+    .card {
+        height: 500px;
+
+        min-width: calc(103% / 2 - 20px);
+        max-width: calc(103% / 2 - 20px);
+    }
+
+    .slider {
+        height: 100vh;
+        display: flex;
+        gap: 10px;
+    }
+
+    .slidreHead {
+        padding: 10px 0;
+    }
+
+    .bottom h4 {
+        padding-top: 10px;
+    }
+
+    #Sspan {
+        font-size: 14px;
+    }
+     .slidreHead h1 {
+        font-size: 50px;
+        font-weight: 800;
+    }
+
+}
+
+/* 768px — 2 ta card */
+@media (max-width: 823px) {
+    .card {
+        min-width: calc(103% / 2 - 20px);
+        max-width: calc(103% / 2 - 20px);
+        height: 510px;
+    }
+
+    .bottom h4 {
+        padding-top: 10px;
+    }
+
+    #Sspan {
+        font-size: 14px;
+    }
+     .slidreHead h1 {
+        font-size: 40px;
+        font-weight: 800;
+    }
+}
+
+/* 768px — 2 ta card */
+@media (max-width: 768px) {
+    .card {
+        min-width: calc(103% / 2 - 20px);
+        max-width: calc(103% / 2 - 20px);
+    }
+
+    .bottom h2,
+    .links,
+    h3,
+    h4 {
+        /* line-height: 20px; */
+        padding: 10px;
+        font-size: 14px;
+
+    }
+
+    .bottom h4 {
+        padding-top: 10px;
+    }
+
+    #Sspan {
+        font-size: 14px;
+    }
+     .slidreHead h1 {
+        font-size: 40px;
+        font-weight: 800;
+    }
+}
+
+@media (max-width: 682px) {
+    .card {
+        max-width: calc(105% / 1 - 20px);
+        height: 600px;
+    }
+
+    .slidreHead {
+        font-size: 22px;
+    }
+
+    .slider {
+        height: 118vh;
+    }
+
+    .bottom h2,
+    .links,
+    h3 {
+        /* line-height: 20px; */
+        padding: 10px;
+        font-size: 20px;
+
+    }
+
+    .top1,
+    .top2,
+    .top3,
+    .top4{
+        height: 300px;
+    }
+
+    .bottom h4 {
+        padding-top: 20px;
+        padding: 50px 0 0 0;
+        font-size: 16px;
+    }
+
+    #Sspan {
+        font-size: 16px;
+    }
+
+    .slidreHead h1 {
+        font-size: 40px;
+        font-weight: 800;
+    }
+    
+}
+
+
+/* 450px — 1 ta card to‘liq ekran */
+@media (max-width: 450px) {
+    .card {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    #Sspan {
+        font-size: 14px;
+    }
+
+    .slidreHead h1 {
+        font-size: 40px;
+        font-weight: 800;
+    }
+
+     .bottom h2,
+    .links,
+    h3 {
+        /* line-height: 20px; */
+        padding: 10px;
+        font-size: 15px;
+
+    }
+}
+
+@media (max-width: 406px) {
+    .card {
+        min-width: 100%;
+        max-width: 100%;
+        height: 640px;
+    }
+
+    #Sspan {
+        font-size: 14px;
+    }
+
+    .bottom h2,
+    .links,
+    h3 {
+        /* line-height: 20px; */
+        padding: 10px;
+        font-size: 17px;
+
+    }
+
+   
+
+    .slidreHead h1 {
+        font-size: 30px;
+        font-weight: 800;
+    }
 }
